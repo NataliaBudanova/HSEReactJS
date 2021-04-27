@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css';
+import React from 'react';
 
-function App() {
+
+const Task = (props) => {
+  const handleClick = () => {
+    return (
+      console.log(props.id + ' completed status = ' + props.completed)
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.tasks}>
+      <div key={props.name} className={styles.name}>{props.name}</div>
+      <div key={props.description} className={styles.description}>{props.description}</div>
+      <div key={props.completed} className={styles.completed}>Completed: {String(props.completed)}</div>
+      <button onClick={handleClick} className={styles.button}>DONE</button>
     </div>
-  );
+  )
 }
 
-export default App;
+class MyTodoList extends React.Component {
+  state = {
+    tasks: [
+      { id: 1, name: 'Cleaning', description: 'Vacuuming', completed: true },
+      { id: 2, name: 'Buy a pillow', description: 'Need to find pink and grey pillow', completed: false },
+      { id: 3, name: 'Math homework', description: 'Test number 3', completed: true },
+      { id: 4, name: 'Science homework', description: 'Research about space', completed: false },
+      { id: 5, name: 'English homework', description: 'Essay about rabbits', completed: false },
+      { id: 6, name: 'Meeting with friends', description: '7 pm', completed: true },
+      { id: 7, name: 'Packing for the trip', description: 'Need to remember about equipment', completed: false }
+    ]
+  }
+
+  render() {
+    return (
+      <div>
+        {this.state.tasks.map(i => <Task id={i.id} name={i.name} description={i.description}
+        completed={i.completed} />)}
+      </div>
+    )
+  }
+}
+
+const App = () => {
+    return (
+      <div>
+        <MyTodoList />
+      </div>
+    )
+  }
+
+  export default App;

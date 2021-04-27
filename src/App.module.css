@@ -1,0 +1,60 @@
+.tasks {
+    width: 100%;
+    height: 70px;
+    background-color: #bef5ff;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  .tasks .name {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    display: inline-block;
+    left: 20px;
+    top: 5px;
+    position: absolute;
+  }
+  
+  .tasks .description {
+    font-size: 15px;
+    line-height: 14px;
+    font-weight: normal;
+    display: inline-block;
+    left: 20px;
+    top: 30px;
+    position: absolute;
+  }
+  
+  .tasks .completed {
+    font-size: 15px;
+    line-height: 14px;
+    font-weight: bold;
+    display: inline-block;
+    left: 20px;
+    top: 50px;
+    position: absolute;
+  }
+  
+  .tasks .button {
+    top: 20px;
+    right: 50px; 
+    width: 80px;
+    height: 35px;
+    background-color: #190283;
+    border-radius: 90px;
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;   
+  }
+  
+  .button:hover {
+  
+    background-color: rgb(68, 0, 255);
+  }
+  
+  .button:active {
+    background-color: #049bff;
+  }
