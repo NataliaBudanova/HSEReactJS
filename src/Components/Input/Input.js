@@ -1,4 +1,3 @@
-
 import styles from './Input.module.scss';
 import React from 'react';
 import classnames from "classnames/bind"
@@ -6,7 +5,7 @@ import { ThemeContext } from "../App/Theme"
 
 const cx = classnames.bind(styles)
 
-const TaskInput = (props) => {
+const Input = (props) => {
   return (
     <ThemeContext.Consumer>
       {theme => (
@@ -21,4 +20,4 @@ const TaskInput = (props) => {
   )
 }
 
-export default TaskInput;
+export default Input;

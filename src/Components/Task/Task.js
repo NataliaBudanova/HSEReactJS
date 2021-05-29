@@ -6,6 +6,7 @@ import { ThemeContext } from '../App/Theme';
 const cx = classnames.bind(styles)
 
 const Task = (props) => {
+
   return (
     <div className={cx("container")}>
       <ThemeContext.Consumer>
@@ -13,7 +14,7 @@ const Task = (props) => {
           <div className={cx("task", `task-theme-${theme}`)}>
             <div className={cx("name")}>{props.name}</div>
             <div className={cx("description")}>{props.description}</div>
-            <div className={cx("completed")}>Done: {String(props.completed)}</div>
+            <div className={cx("completed")}>Completed: {String(props.completed)}</div>
             <button className={cx("button", `button-theme-${theme}`)} onClick={props.onClick}>DONE</button>
           </div>
         )}
