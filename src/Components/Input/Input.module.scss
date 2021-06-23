@@ -1,0 +1,63 @@
+.input {
+    &-theme-light {
+      background-color: rgb(225, 195, 233);
+      width: 95%;
+      margin-left: 25px;
+      margin-right: 25px;
+      height: 40px;
+      position: relative;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+  
+      &:hover {
+        position: relative;
+        background-color: rgb(217, 158, 233);
+      }
+  
+      &:active {
+        position: relative;
+        background-color: rgb(212, 120, 238);
+        border-color: rgb(234, 131, 255);
+        border-radius: 5px;
+      }
+  
+      &:focus {
+        position: relative;
+        background-color: rgb(212, 120, 238);;
+        border-color: rgb(234, 131, 255);
+        border-radius: 5px;
+      }
+    }
+  
+    &-theme-dark {
+      background-color: #2a1430;
+      width: 95%;
+      margin-left: 25px;
+      margin-right: 25px;
+      height: 40px;
+      position: relative;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+  
+      &:hover {
+        position: relative;
+        background-color: #53335c;
+      }
+  
+      &:active {
+        position: relative;
+        background-color: #561d66;
+        border-color: black;
+        border-radius: 5px;
+      }
+  
+      &:focus {
+        position: relative;
+        background-color: #561d66;
+        border-color: black;
+        border-radius: 5px;
+      }
+    }
+  }

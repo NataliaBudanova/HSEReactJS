@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-left: 20px;
+
+    .h1 {
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: bold;
+        display: flex;
+        margin-left: 200px;
+        top: 30px;
+        margin-bottom: 30px;
+        position: relative;
+        color: black;
+        
+      }
+  }
